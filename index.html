@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>TODO LIST</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="title">
+                <h2>TODO LIST</h2>
+            </div>
+            <div class="tâche">
+                <h3>Ajoutez une nouvelle tâche</h3>
+                <div class="add">
+                    <a href="#e" onclick="add_new()">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ****** CREATION DES PARAMETRES ****** -->
+
+
+            <div class="settings">
+                <div class="column">
+                    <div class="input-box title">
+                        <label>Titre</label>
+                        <input type="text" id="title">
+                    </div>
+                    <div class="input-box description">
+                        <label for="">Description</label>
+                        <input type="text" name="" id="description">
+                    </div>
+                    <div class="input-box">
+                        <label>Categorie</label>
+                        <select name="" id="categorie">
+                            <option value="" hidden></option>
+                            <option value="TRAVAIL">Travail</option>
+                            <option value="MAISON">Maison</option>
+                            <option value="BUSINESS">Business</option>
+                            <option value="SPORT">Sport</option>
+                            <option value="PERSONNEL">Personnel</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="">Date</label>
+                        <select name="" id="date">
+                            <option value="" hidden></option>
+                            <option value="AUJOURD'HUI">AUJOURD'HUI</option>
+                            <option value="DEMAIN">DEMAIN</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="btn">
+            <button class="button" onclick="add_to_list()"><a href="#e">Ajouter</a></button>
+        </div>
+
+        <div class="controls">
+            <h2>👇 Vos tâches s'afficheront ici 👇</h2>
+        </div>
+
+        <!-- ********* GENERER LA TACHE ********* -->
+        <div class="creation">
+            <ul class="task-box"></ul>
+        </div>
+    </div>
+</body>
+</html>

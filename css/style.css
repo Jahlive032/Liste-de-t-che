@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Monofett&family=Monomaniac+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    /* background: #ffffff; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px ;
+    font-family: 'Monomaniac One', sans-serif;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+.container{
+    position: block;
+    background: #e5e5e5;
+    padding: 30px;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.title h2{
+    font-size: 3.8rem;
+    font-family: 'Monofett', sans-serif;
+    text-align: center;
+}
+
+.tâche{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    width: 60%;
+    margin-left: 20%;
+    left: 0;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.tâche h3{
+    font-size: 1.9rem;
+    font-family: 'Monomaniac One', sans-serif;
+}
+
+.tâche i{
+    color: #fca311;
+    font-size: 1.6rem;
+}
+
+.add{
+    display: block;
+}
+
+.add > a > i{
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.add_active > a > i{
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.settings{
+    display: flex;
+    justify-content: space-around;
+}
+
+.settings .input-box{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box input, select{
+    height: 40px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 1px 0 0 15px;
+}
+
+.input-box label{
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.settings{  
+    position: relative;
+    float: left;
+    width: 100%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: scale(0,0);
+    -ms-transform: scale(0,0);
+    -o-transform: scale(0,0);
+    transform: scale(0,0);
+    height: 0px;
+    margin: 0px;
+}
+
+.settings_active{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    height: 0px;
+    margin: 10px 0px;
+    height: 100px;  
+    }
+
+
+.settings .column{
+    display: flex;
+    column-gap: 20px;
+}
+
+.btn{
+    text-align: center;
+}
+
+.button{
+    position: relative;
+    background-color: #fca311;
+    padding: 17px 60px ;
+    border: none;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 30px;
+    margin: 25px;
+    font-weight: bold;
+    font-size: 1.5rem; 
+    box-shadow: 0px 1px 6px 0px rgb(158, 129, 254);
+    transform: translate(0, -3px);
+    cursor: pointer;
+    transition: 0.2s;
+    transition-timing-function: linear;  
+    border-bottom: 5px solid rgb(50, 50, 50);
+}
+
+.button:active {
+    transform: translate(0, 0);
+    border-bottom: 2px solid rgb(50, 50, 50);
+  }
+
+.button a{
+    text-decoration: none;
+    color: white;
+}
+
+.controls{
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.controls .filters{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.controls .filters button{
+    border: none;
+    cursor: pointer;
+    background-color: #fca311;
+    color: #000000;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.creation{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.creation > ul > li  {
+    position: relative;
+    float: left;
+    width: 100%; 
+    height: 75px;
+    left: 0;
+    background-color: #F1F1EF;
+    list-style: none;
+    box-shadow: 1px 10px 20px 0px rgba(218, 215, 206,0.8);
+    z-index: 2;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.aff_categorie{
+    width: 125px;
+    position: relative;
+    float: left;
+    height: 20px;
+    top:50%;
+    margin-top: -22px;
+}
+
+.aff_categorie> p{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.aff_info{
+    width: 250px;
+    position: relative;
+    float: left;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.aff_info > h4{
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.aff_info > p{
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #999;
+    text-align: center;
+}
+
+.aff_date{
+    display: flex;
+    width: 121px;
+    position: relative;
+    float: left;
+    height: 14px;
+    top:50%;
+    margin-top: -18px;
+}
+
+.aff_date > .info_date{
+    text-align: right;
+    font-size: 1.3rem;
+    font-weight: 700;  
+}
+
+.aff_date > .info_date > p {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.aff_date:hover > .options{
+    opacity: 1;  
+}
+
+
+.aff_date > .options > ul > li{
+    position: relative;
+    float: right;
+    width: 100%;
+    list-style-type: none;
+}
+
+.aff_date > .options > ul > li > a {
+    display: block;
+    width: 20px;
+    height: 15px;
+    padding: 5px 3px;
+    border-radius: 50%;
+    color: #fff;
+    margin-top: -5px;
+}
+
+.options li{
+    display: flex;
+    margin-top: 5px;
+    gap: 20px;
+}
+
+.aff_date > .options > ul > li > a > i {
+    font-size: 1rem;
+}
+
+.list_travail > .aff_categorie{
+    color: #e45;
+}
+
+.list_maison > .aff_categorie{
+    color: #fca311;
+}
+
+.list_dsp_none {
+    display: none;
+    opacity: 0;
+    margin-top: 20px;
+}
+
+.list_dsp_true{
+    margin:0px;
+    opacity: 1;  
+}
+
+.list_travail{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.list_maison > .aff_categorie{
+    color: #fca311;
+}
+
+.list_finish_state{
+    opacity: 0.3;
+    margin: 15px 0px;
+    z-index: 1;
+}
